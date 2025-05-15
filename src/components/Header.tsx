@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <h1 className="text-2xl font-serif font-bold text-white tracking-wide">
-              <span className="text-amber-600">LAWSON</span> & ASSOCIATES
+              <span className="text-amber-600">dela Pena</span> Law Offices
             </h1>
           </div>
 
