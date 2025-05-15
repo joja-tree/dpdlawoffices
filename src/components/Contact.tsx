@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Toaster, toast } from 'react-hot-toast';
+import { supabase } from '../lib/supabase';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,27 +11,43 @@ const Contact: React.FC = () => {
     service: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to a server
-    alert('Thank you for contacting us. We will get back to you shortly.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([formData]);
+
+      if (error) throw error;
+
+      toast.success('Thank you for contacting us. We will get back to you shortly.');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('Something went wrong. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-white">
+      <Toaster position="top-right" />
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/2">
@@ -106,6 +124,7 @@ const Contact: React.FC = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                 ></textarea>
               </div>
@@ -113,9 +132,10 @@ const Contact: React.FC = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-md shadow-md hover:shadow-lg transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-md shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Request Consultation
+                  {isSubmitting ? 'Sending...' : 'Request Consultation'}
                 </button>
               </div>
             </form>
