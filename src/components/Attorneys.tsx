@@ -2,12 +2,11 @@ import React from 'react';
 
 interface AttorneyProps {
   name: string;
-  title: string;
   image: string;
   specialties: string[];
 }
 
-const Attorney: React.FC<AttorneyProps> = ({ name, title, image, specialties }) => {
+const Attorney: React.FC<AttorneyProps> = ({ name, image, specialties }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden group">
       <div className="aspect-[3/4] overflow-hidden">
@@ -19,7 +18,6 @@ const Attorney: React.FC<AttorneyProps> = ({ name, title, image, specialties }) 
       </div>
       <div className="p-6">
         <h3 className="text-xl font-serif font-bold text-slate-800">{name}</h3>
-        <p className="text-amber-600 font-medium mb-3">{title}</p>
         <div className="flex flex-wrap gap-2 mt-4">
           {specialties.map((specialty, index) => (
             <span key={index} className="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full">
@@ -36,15 +34,13 @@ const Attorneys: React.FC = () => {
   const attorneys = [
     {
       name: 'Atty. Plen John Mark M. Dela Peña',
-      title: 'Partner',
       image: 'https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specialties: ['Corporate Law', 'Civil Law', 'Criminal Law']
+      specialties: ['Real Estate', 'Family Law', 'Litigation', 'Estate Planning', 'Personal Injury']
     },
     {
       name: 'Atty. Theresa Marie C. Puno-Dela Peña',
-      title: 'Partner',
       image: 'https://images.pexels.com/photos/5668770/pexels-photo-5668770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specialties: ['Family Law', 'Civil Law', 'Labor Law']
+      specialties: ['Corporate Law', 'Real Estate', 'Estate Planning']
     }
   ];
 
@@ -60,7 +56,6 @@ const Attorneys: React.FC = () => {
             <Attorney 
               key={index}
               name={attorney.name}
-              title={attorney.title}
               image={attorney.image}
               specialties={attorney.specialties}
             />

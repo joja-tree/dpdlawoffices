@@ -28,7 +28,7 @@ const PracticeAreas: React.FC = () => {
     },
     {
       title: 'Family Law',
-      description: 'Compassionate representation for divorce, custody, adoption, and other sensitive family matters.',
+      description: 'Compassionate representation for annulment, custody, adoption, and other sensitive family matters.',
       icon: <Users size={32} />
     },
     {
