@@ -8,7 +8,7 @@ const LoadingScreen: React.FC = () => {
           <div className="w-16 h-16 border-4 border-amber-600/30 border-t-amber-600 rounded-full animate-spin"></div>
         </div>
         <h2 className="text-2xl font-serif font-bold text-white mb-2">
-          <span className="text-amber-600">LAWSON</span> & ASSOCIATES
+          <span className="text-amber-600">DPD</span> Law Offices
         </h2>
         <p className="text-slate-400">Loading your experience...</p>
       </div>
