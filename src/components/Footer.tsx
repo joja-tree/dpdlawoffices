@@ -1,5 +1,4 @@
 import React from 'react';
-import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -13,20 +12,6 @@ const Footer: React.FC = () => {
             <p className="text-slate-400 mb-6">
               Dedicated to providing exceptional legal services with integrity, expertise, and personalized attention.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-amber-500 transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-slate-400 hover:text-amber-500 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-slate-400 hover:text-amber-500 transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-slate-400 hover:text-amber-500 transition-colors">
-                <Instagram size={20} />
-              </a>
-            </div>
           </div>
           
           <div>
@@ -74,9 +59,9 @@ const Footer: React.FC = () => {
         <div className="pt-8 border-t border-slate-800 text-slate-500 flex flex-col md:flex-row justify-between items-center">
           <p>&copy; {new Date().getFullYear()} DPD Law Offices. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <a href="#" className="hover:text-amber-500 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-amber-500 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-amber-500 transition-colors">Disclaimer</a>
+            <a href="/privacy" className="hover:text-amber-500 transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-amber-500 transition-colors">Terms of Service</a>
+            <a href="/disclaimer" className="hover:text-amber-500 transition-colors">Disclaimer</a>
           </div>
         </div>
       </div>
