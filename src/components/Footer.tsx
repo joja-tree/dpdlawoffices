@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           <div>
             <h3 className="text-xl font-serif font-bold mb-4">
-              <span className="text-amber-500">LAWSON</span> & ASSOCIATES
+              <span className="text-amber-500">DPD</span> Law Offices
             </h3>
             <p className="text-slate-400 mb-6">
               Dedicated to providing exceptional legal services with integrity, expertise, and personalized attention.
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-medium mb-4">Practice Areas</h4>
             <ul className="space-y-2">
-              {['Corporate Law', 'Family Law', 'Real Estate', 'Litigation', 'Estate Planning', 'Personal Injury'].map((item) => (
+              {['Corporate Law', 'Family Law', 'Civil Law', 'Criminal Law', 'Labor Law', 'Real Estate'].map((item) => (
                 <li key={item}>
                   <a 
                     href="#practice-areas"
@@ -64,16 +64,15 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-medium mb-4">Contact Information</h4>
             <address className="text-slate-400 not-italic space-y-2">
-              <p>123 Legal Avenue, Suite 500</p>
-              <p>Metropolis, CA 90001</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: info@lawsonassociates.com</p>
+              <p>Address Pending</p>
+              <p>Phone: (998) 969-9662</p>
+              <p>Email: contactus@dpdlawoffices.com</p>
             </address>
           </div>
         </div>
         
         <div className="pt-8 border-t border-slate-800 text-slate-500 flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {new Date().getFullYear()} Lawson & Associates. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} DPD Law Offices. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <a href="#" className="hover:text-amber-500 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-amber-500 transition-colors">Terms of Service</a>

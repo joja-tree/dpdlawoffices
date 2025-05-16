@@ -35,28 +35,16 @@ const Attorney: React.FC<AttorneyProps> = ({ name, title, image, specialties }) 
 const Attorneys: React.FC = () => {
   const attorneys = [
     {
-      name: 'James Lawson',
-      title: 'Founding Partner',
-      image: 'https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specialties: ['Corporate Law', 'Mergers & Acquisitions', 'Business Strategy']
-    },
-    {
-      name: 'Sarah Reynolds',
-      title: 'Senior Partner',
-      image: 'https://images.pexels.com/photos/5668770/pexels-photo-5668770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specialties: ['Family Law', 'Divorce', 'Child Custody']
-    },
-    {
-      name: 'Michael Chen',
+      name: 'Atty. Plen John Mark M. Dela Peña',
       title: 'Partner',
-      image: 'https://images.pexels.com/photos/5668902/pexels-photo-5668902.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specialties: ['Real Estate', 'Property Disputes', 'Land Use']
+      image: 'https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      specialties: ['Corporate Law', 'Civil Law', 'Criminal Law']
     },
     {
-      name: 'Emily Thompson',
-      title: 'Associate',
-      image: 'https://images.pexels.com/photos/5668765/pexels-photo-5668765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      specialties: ['Litigation', 'Civil Disputes', 'Mediation']
+      name: 'Atty. Theresa Marie C. Puno-Dela Peña',
+      title: 'Partner',
+      image: 'https://images.pexels.com/photos/5668770/pexels-photo-5668770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      specialties: ['Family Law', 'Civil Law', 'Labor Law']
     }
   ];
 
@@ -67,7 +55,7 @@ const Attorneys: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-4">Our Attorneys</h2>
           <p className="max-w-2xl mx-auto text-slate-600">Meet our exceptional team of legal experts dedicated to providing you with the highest quality representation and counsel.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
           {attorneys.map((attorney, index) => (
             <Attorney 
               key={index}

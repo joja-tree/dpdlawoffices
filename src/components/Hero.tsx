@@ -7,10 +7,10 @@ const Hero: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 md:px-6 py-20 md:py-32">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
-            Dedicated Legal Excellence <span className="text-amber-500">Since 1995</span>
+            Legal Excellence with <span className="text-amber-500">Personal Touch</span>
           </h1>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl">
-            Lawson & Associates delivers exceptional legal representation with a commitment to integrity, personalized service, and successful outcomes.
+            DPD Law Offices delivers exceptional legal representation with a commitment to integrity, personalized service, and successful outcomes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
@@ -32,5 +32,3 @@ const Hero: React.FC = () => {
     </section>
   );
 };
-
-export default Hero;

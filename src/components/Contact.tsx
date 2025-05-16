@@ -108,10 +108,10 @@ const Contact: React.FC = () => {
                     <option value="">Select a service</option>
                     <option value="corporate">Corporate Law</option>
                     <option value="family">Family Law</option>
+                    <option value="civil">Civil Law</option>
+                    <option value="criminal">Criminal Law</option>
+                    <option value="labor">Labor Law</option>
                     <option value="realestate">Real Estate</option>
-                    <option value="litigation">Litigation</option>
-                    <option value="estate">Estate Planning</option>
-                    <option value="injury">Personal Injury</option>
                   </select>
                 </div>
               </div>
@@ -152,7 +152,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-slate-800">Address</h4>
-                    <p className="text-slate-600">123 Legal Avenue, Suite 500<br />Metropolis, CA 90001</p>
+                    <p className="text-slate-600">Address Pending</p>
                   </div>
                 </div>
                 
@@ -162,7 +162,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-slate-800">Phone</h4>
-                    <p className="text-slate-600">(123) 456-7890</p>
+                    <p className="text-slate-600">(998) 969-9662</p>
                   </div>
                 </div>
                 
@@ -172,7 +172,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-slate-800">Email</h4>
-                    <p className="text-slate-600">info@lawsonassociates.com</p>
+                    <p className="text-slate-600">contactus@dpdlawoffices.com</p>
                   </div>
                 </div>
                 
@@ -182,7 +182,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-slate-800">Office Hours</h4>
-                    <p className="text-slate-600">Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 2:00 PM<br />Sunday: Closed</p>
+                    <p className="text-slate-600">Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: By Appointment<br />Sunday: Closed</p>
                   </div>
                 </div>
               </div>

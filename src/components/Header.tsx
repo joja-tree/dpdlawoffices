@@ -24,19 +24,19 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <h1 className="text-2xl font-serif font-bold text-white tracking-wide">
-              <span className="text-amber-600">Lawson</span> & Associates
+              <span className="text-amber-600">DPD</span> Law Offices
             </h1>
           </div>
 
           {/* Top Contact Info (Desktop) */}
           <div className="hidden md:flex items-center space-x-6 text-white">
-            <a href="tel:+1234567890" className="flex items-center space-x-2 text-sm hover:text-amber-500 transition-colors">
+            <a href="tel:+9989699662" className="flex items-center space-x-2 text-sm hover:text-amber-500 transition-colors">
               <Phone size={16} />
-              <span>(123) 456-7890</span>
+              <span>(998) 969-9662</span>
             </a>
-            <a href="mailto:info@lawsonassociates.com" className="flex items-center space-x-2 text-sm hover:text-amber-500 transition-colors">
+            <a href="mailto:contactus@dpdlawoffices.com" className="flex items-center space-x-2 text-sm hover:text-amber-500 transition-colors">
               <Mail size={16} />
-              <span>info@lawsonassociates.com</span>
+              <span>contactus@dpdlawoffices.com</span>
             </a>
           </div>
 
@@ -78,13 +78,13 @@ const Header: React.FC = () => {
               </a>
             ))}
             <div className="pt-2 border-t border-slate-700 space-y-3">
-              <a href="tel:+1234567890" className="flex items-center space-x-2 text-white hover:text-amber-500 transition-colors">
+              <a href="tel:+9989699662" className="flex items-center space-x-2 text-white hover:text-amber-500 transition-colors">
                 <Phone size={16} />
-                <span>(123) 456-7890</span>
+                <span>(998) 969-9662</span>
               </a>
-              <a href="mailto:info@lawsonassociates.com" className="flex items-center space-x-2 text-white hover:text-amber-500 transition-colors">
+              <a href="mailto:contactus@dpdlawoffices.com" className="flex items-center space-x-2 text-white hover:text-amber-500 transition-colors">
                 <Mail size={16} />
-                <span>info@lawsonassociates.com</span>
+                <span>contactus@dpdlawoffices.com</span>
               </a>
             </div>
           </div>
