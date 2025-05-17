@@ -23,11 +23,21 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
 
     try {
+      // Submit to Supabase
       const { error } = await supabase
         .from('contact_submissions')
         .insert([formData]);
 
       if (error) throw error;
+
+      // Send to webhook
+      await fetch('https://hook.eu2.make.com/ow4qij76bakh8b44f6j3agj3xep9kk5w', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
       toast.success('Thank you for contacting us. We will get back to you shortly.');
       setFormData({
