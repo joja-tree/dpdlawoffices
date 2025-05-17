@@ -13,6 +13,20 @@ import TermsOfService from './components/TermsOfService';
 import Disclaimer from './components/Disclaimer';
 
 function HomePage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <>
       <Hero />
@@ -25,21 +39,9 @@ function HomePage() {
 }
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     document.title = 'DPD Law Offices | Legal Excellence';
-    
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
   }, []);
-
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
 
   return (
     <Router>

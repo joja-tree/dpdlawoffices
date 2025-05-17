@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsOfService: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-50 pt-24">
+    <div className="bg-slate-50 pt-24">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-serif font-bold text-slate-800 mb-8">Terms of Service</h1>
         
