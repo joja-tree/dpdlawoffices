@@ -43,7 +43,7 @@ const TermsOfService: React.FC = () => {
           </section>
         </div>
       </div>
-      <div className="h-16 bg-gradient-to-t from-slate-100 to-transparent"></div>
+      <div className="h-16 bg-gradient-to-t from-slate-500 to-transparent"></div>
     </section>
   );
 };
