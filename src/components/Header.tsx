@@ -29,7 +29,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="text-2xl font-serif font-bold text-white tracking-wide">
-              <span className="text-amber-600">DPD</span> Law Offices
+              <span Link to="/" className="text-amber-600">DPD</span> Law Offices
             </Link>
           </div>
 
