@@ -8,7 +8,7 @@ interface AttorneyProps {
 
 const Attorney: React.FC<AttorneyProps> = ({ name, image, specialties }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden group">
+    <div className="bg-slate-50 rounded-lg shadow-md overflow-hidden group">
       <div className="aspect-[3/4] overflow-hidden">
         <img 
           src={image} 
