@@ -5,7 +5,7 @@
 
 [[redirects]]
   from = "/*"
-  to = "https://dpdlawoffices.com"
+  to = "https://dpdlawoffices.com/:splat"
   status = 301
   force = true
 
