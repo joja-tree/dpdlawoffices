@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
 
   useEffect(() => {
@@ -16,6 +17,14 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleLogoClick = () => {
+    if (isHomePage) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
 
   const headerClass = isHomePage
     ? `fixed w-full z-50 transition-all duration-300 ${
@@ -28,9 +37,12 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-serif font-bold text-white tracking-wide">
+            <button
+              onClick={handleLogoClick}
+              className="text-2xl font-serif font-bold text-white tracking-wide hover:text-amber-500 transition-colors"
+            >
               <span className="text-amber-600">DPD</span> Law Offices
-            </Link>
+            </button>
           </div>
 
           <div className="hidden md:flex items-center space-x-6 text-white">
