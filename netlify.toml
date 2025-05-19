@@ -1,5 +1,10 @@
 [[redirects]]
   from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
   to = "https://dpdlawoffices.com/:splat"
   status = 301
   force = true
