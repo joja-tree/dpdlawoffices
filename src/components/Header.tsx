@@ -18,6 +18,19 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    if (isHomePage) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setIsMenuOpen(false);
+      }
+    } else {
+      navigate('/', { state: { scrollTo: sectionId } });
+    }
+  };
+
   const handleLogoClick = () => {
     if (isHomePage) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -62,6 +75,7 @@ const Header: React.FC = () => {
                 <a 
                   key={item} 
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
+                  onClick={(e) => handleNavigation(e, item.toLowerCase().replace(' ', '-'))}
                   className="text-white hover:text-amber-500 transition-colors"
                 >
                   {item}
@@ -91,8 +105,8 @@ const Header: React.FC = () => {
                 <a 
                   key={item} 
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
+                  onClick={(e) => handleNavigation(e, item.toLowerCase().replace(' ', '-'))}
                   className="block text-white py-2 hover:text-amber-500 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item}
                 </a>
