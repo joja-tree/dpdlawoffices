@@ -2,15 +2,15 @@ import React from 'react';
 
 const LoadingScreen: React.FC = () => {
   return (
-    <div className="fixed inset-0 bg-dark flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-slate-900 flex items-center justify-center z-50">
       <div className="text-center">
         <div className="mb-8">
-          <div className="w-16 h-16 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+          <div className="w-16 h-16 border-4 border-amber-600/30 border-t-amber-600 rounded-full animate-spin"></div>
         </div>
         <h2 className="text-2xl font-serif font-bold text-white mb-2">
-          <span className="text-primary">DPD</span> Law Offices
+          <span className="text-amber-600">DPD</span> Law Offices
         </h2>
-        <p className="text-light">Loading your experience...</p>
+        <p className="text-slate-400">Loading your experience...</p>
       </div>
     </div>
   );

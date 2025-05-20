@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Scale } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () => {
@@ -41,21 +41,33 @@ const Header: React.FC = () => {
 
   const headerClass = isHomePage
     ? `fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-dark shadow-md py-3' : 'bg-transparent py-5'
+        isScrolled ? 'bg-slate-900 shadow-md py-3' : 'bg-transparent py-5'
       }`
-    : 'fixed w-full z-50 bg-dark shadow-md py-3';
+    : 'fixed w-full z-50 bg-slate-900 shadow-md py-3';
 
   return (
     <header className={headerClass}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <button
-            onClick={handleLogoClick}
-            className="flex items-center space-x-3 text-2xl font-serif font-bold text-white hover:text-primary transition-colors"
-          >
-            <Scale className="w-8 h-8" />
-            <span>DPD Law</span>
-          </button>
+          <div className="flex items-center">
+            <button
+              onClick={handleLogoClick}
+              className="text-2xl font-serif font-bold text-white tracking-wide hover:text-amber-500 transition-colors"
+            >
+              <span className="text-amber-600">DPD</span> Law Offices
+            </button>
+          </div>
+
+          <div className="hidden md:flex items-center space-x-6 text-white">
+            <a href="tel:+9989699662" className="flex items-center space-x-2 text-sm hover:text-amber-500 transition-colors">
+              <Phone size={16} />
+              <span>(998) 969-9662</span>
+            </a>
+            <a href="mailto:contactus@dpdlawoffices.com" className="flex items-center space-x-2 text-sm hover:text-amber-500 transition-colors">
+              <Mail size={16} />
+              <span>contactus@dpdlawoffices.com</span>
+            </a>
+          </div>
 
           <nav className="hidden md:flex items-center space-x-8">
             {isHomePage ? (
@@ -64,13 +76,13 @@ const Header: React.FC = () => {
                   key={item} 
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
                   onClick={(e) => handleNavigation(e, item.toLowerCase().replace(' ', '-'))}
-                  className="text-white hover:text-primary transition-colors"
+                  className="text-white hover:text-amber-500 transition-colors"
                 >
                   {item}
                 </a>
               ))
             ) : (
-              <Link to="/" className="text-white hover:text-primary transition-colors">
+              <Link to="/" className="text-white hover:text-amber-500 transition-colors">
                 Home
               </Link>
             )}
@@ -86,7 +98,7 @@ const Header: React.FC = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-dark shadow-lg">
+        <div className="md:hidden bg-slate-900 shadow-lg">
           <div className="px-4 py-3 space-y-4">
             {isHomePage ? (
               ['Home', 'About', 'Practice Areas', 'Attorneys', 'Contact'].map((item) => (
@@ -94,7 +106,7 @@ const Header: React.FC = () => {
                   key={item} 
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
                   onClick={(e) => handleNavigation(e, item.toLowerCase().replace(' ', '-'))}
-                  className="block text-white py-2 hover:text-primary transition-colors"
+                  className="block text-white py-2 hover:text-amber-500 transition-colors"
                 >
                   {item}
                 </a>
@@ -102,12 +114,22 @@ const Header: React.FC = () => {
             ) : (
               <Link 
                 to="/" 
-                className="block text-white py-2 hover:text-primary transition-colors"
+                className="block text-white py-2 hover:text-amber-500 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
             )}
+            <div className="pt-2 border-t border-slate-700 space-y-3">
+              <a href="tel:+9989699662" className="flex items-center space-x-2 text-white hover:text-amber-500 transition-colors">
+                <Phone size={16} />
+                <span>(998) 969-9662</span>
+              </a>
+              <a href="mailto:contactus@dpdlawoffices.com" className="flex items-center space-x-2 text-white hover:text-amber-500 transition-colors">
+                <Mail size={16} />
+                <span>contactus@dpdlawoffices.com</span>
+              </a>
+            </div>
           </div>
         </div>
       )}
