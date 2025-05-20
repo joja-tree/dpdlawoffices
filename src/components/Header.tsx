@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, Scale } from 'lucide-react';
+import { Menu, X, Scale } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () => {
@@ -49,28 +49,13 @@ const Header: React.FC = () => {
     <header className={headerClass}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <button
-              onClick={handleLogoClick}
-              className="flex items-center space-x-2 text-2xl font-serif font-bold text-white tracking-wide hover:text-primary transition-colors"
-            >
-              <div className="w-10 h-10 bg-primary flex items-center justify-center rounded">
-                <Scale className="w-6 h-6 text-white" />
-              </div>
-              <span><span className="text-primary">DPD</span> Law</span>
-            </button>
-          </div>
-
-          <div className="hidden md:flex items-center space-x-6 text-white">
-            <a href="tel:+9989699662" className="flex items-center space-x-2 text-sm hover:text-primary transition-colors">
-              <Phone size={16} />
-              <span>(998) 969-9662</span>
-            </a>
-            <a href="mailto:contactus@dpdlawoffices.com" className="flex items-center space-x-2 text-sm hover:text-primary transition-colors">
-              <Mail size={16} />
-              <span>contactus@dpdlawoffices.com</span>
-            </a>
-          </div>
+          <button
+            onClick={handleLogoClick}
+            className="flex items-center space-x-3 text-2xl font-serif font-bold text-white hover:text-primary transition-colors"
+          >
+            <Scale className="w-8 h-8" />
+            <span>DPD Law</span>
+          </button>
 
           <nav className="hidden md:flex items-center space-x-8">
             {isHomePage ? (
@@ -123,16 +108,6 @@ const Header: React.FC = () => {
                 Home
               </Link>
             )}
-            <div className="pt-2 border-t border-gray-700 space-y-3">
-              <a href="tel:+9989699662" className="flex items-center space-x-2 text-white hover:text-primary transition-colors">
-                <Phone size={16} />
-                <span>(998) 969-9662</span>
-              </a>
-              <a href="mailto:contactus@dpdlawoffices.com" className="flex items-center space-x-2 text-white hover:text-primary transition-colors">
-                <Mail size={16} />
-                <span>contactus@dpdlawoffices.com</span>
-              </a>
-            </div>
           </div>
         </div>
       )}
