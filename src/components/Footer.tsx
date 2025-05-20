@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           <div>
             <h3 className="text-xl font-serif font-bold mb-4">
-              <span className="text-amber-500">DPD</span> Law Offices
+              <span className="text-blue-500">DPD</span> Law Offices
             </h3>
             <p className="text-slate-400 mb-6">
               Dedicated to providing exceptional legal services with integrity, expertise, and personalized attention.
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                 <li key={item}>
                   <a 
                     href={`#${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-slate-400 hover:text-amber-500 transition-colors"
+                    className="text-slate-400 hover:text-blue-500 transition-colors"
                   >
                     {item}
                   </a>
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                 <li key={item}>
                   <a 
                     href="#practice-areas"
-                    className="text-slate-400 hover:text-amber-500 transition-colors"
+                    className="text-slate-400 hover:text-blue-500 transition-colors"
                   >
                     {item}
                   </a>
@@ -60,9 +60,9 @@ const Footer: React.FC = () => {
         <div className="pt-8 border-t border-slate-800 text-slate-500 flex flex-col md:flex-row justify-between items-center">
           <p>&copy; {new Date().getFullYear()} DPD Law Offices. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <Link to="/privacy" className="hover:text-amber-500 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-amber-500 transition-colors">Terms of Service</Link>
-            <Link to="/disclaimer" className="hover:text-amber-500 transition-colors">Disclaimer</Link>
+            <Link to="/privacy" className="hover:text-blue-500 transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-blue-500 transition-colors">Terms of Service</Link>
+            <Link to="/disclaimer" className="hover:text-blue-500 transition-colors">Disclaimer</Link>
           </div>
         </div>
       </div>

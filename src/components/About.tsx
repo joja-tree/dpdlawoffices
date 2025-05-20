@@ -14,7 +14,7 @@ const About: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-amber-600 text-white p-6 rounded shadow-lg">
+              <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded shadow-lg">
                 <p className="text-4xl font-bold">30+</p>
                 <p className="text-sm font-medium uppercase tracking-wide">Years of Excellence</p>
               </div>

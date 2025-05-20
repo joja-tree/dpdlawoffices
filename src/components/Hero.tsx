@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 md:px-6 py-20 md:py-32">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
-            Legal Excellence with <span className="text-amber-500">Personal Touch</span>
+            Legal Excellence with <span className="text-blue-500">Personal Touch</span>
           </h1>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl">
             DPD Law Offices delivers exceptional legal representation with a commitment to integrity, personalized service, and successful outcomes.
@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="#contact" 
-              className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded shadow-lg hover:shadow-xl transition-all duration-300 text-center"
             >
               Free Consultation
             </a>

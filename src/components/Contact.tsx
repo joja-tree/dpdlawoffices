@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
                     <option value="corporate">Corporate Law</option>
@@ -135,7 +135,7 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                  className="w-full px-4 py-2 bg-slate-100 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 ></textarea>
               </div>
               
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-md shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Request Consultation'}
                 </button>
@@ -157,7 +157,7 @@ const Contact: React.FC = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="text-amber-600 mt-1">
+                  <div className="text-blue-600 mt-1">
                     <MapPin size={24} />
                   </div>
                   <div>
@@ -167,7 +167,7 @@ const Contact: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="text-amber-600 mt-1">
+                  <div className="text-blue-600 mt-1">
                     <Phone size={24} />
                   </div>
                   <div>
@@ -177,7 +177,7 @@ const Contact: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="text-amber-600 mt-1">
+                  <div className="text-blue-600 mt-1">
                     <Mail size={24} />
                   </div>
                   <div>
@@ -187,7 +187,7 @@ const Contact: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="text-amber-600 mt-1">
+                  <div className="text-blue-600 mt-1">
                     <Clock size={24} />
                   </div>
                   <div>

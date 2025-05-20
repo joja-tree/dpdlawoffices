@@ -11,8 +11,8 @@ const Testimonial: React.FC<TestimonialProps> = ({ content, author, position }) 
   return (
     <div className="bg-white rounded-lg shadow-md p-8 max-w-3xl mx-auto">
       <div className="flex justify-center mb-6">
-        <div className="bg-amber-500/10 rounded-full p-3">
-          <Quote size={32} className="text-amber-600" />
+        <div className="bg-blue-500/10 rounded-full p-3">
+          <Quote size={32} className="text-blue-600" />
         </div>
       </div>
       <blockquote className="text-lg text-slate-700 text-center mb-6 italic">"{content}"</blockquote>
@@ -72,7 +72,7 @@ const Testimonials: React.FC = () => {
           <div className="flex justify-center mt-8 space-x-4">
             <button 
               onClick={prevTestimonial}
-              className="bg-white text-slate-700 hover:text-amber-600 p-2 rounded-full shadow hover:shadow-md transition-all"
+              className="bg-white text-slate-700 hover:text-blue-600 p-2 rounded-full shadow hover:shadow-md transition-all"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={20} />
@@ -83,7 +83,7 @@ const Testimonials: React.FC = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    index === currentIndex ? 'bg-amber-600 w-4' : 'bg-slate-300'
+                    index === currentIndex ? 'bg-blue-600 w-4' : 'bg-slate-300'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -91,7 +91,7 @@ const Testimonials: React.FC = () => {
             </div>
             <button 
               onClick={nextTestimonial}
-              className="bg-white text-slate-700 hover:text-amber-600 p-2 rounded-full shadow hover:shadow-md transition-all"
+              className="bg-white text-slate-700 hover:text-blue-600 p-2 rounded-full shadow hover:shadow-md transition-all"
               aria-label="Next testimonial"
             >
               <ChevronRight size={20} />

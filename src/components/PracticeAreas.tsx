@@ -10,7 +10,7 @@ interface PracticeAreaProps {
 const PracticeArea: React.FC<PracticeAreaProps> = ({ title, description, icon }) => {
   return (
     <div className="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-      <div className="text-amber-600 mb-4">
+      <div className="text-blue-600 mb-4">
         {icon}
       </div>
       <h3 className="text-xl font-serif font-bold text-slate-800 mb-3">{title}</h3>
