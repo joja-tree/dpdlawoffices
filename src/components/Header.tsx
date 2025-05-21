@@ -55,7 +55,7 @@ const Header: React.FC = () => {
               className="flex items-center hover:opacity-80 transition-opacity"
             >
               <img 
-                src="/logo.png" 
+                src="/logo2.png" 
                 alt="DPD Law Offices Logo" 
                 className="h-12 w-auto"
               />
