@@ -52,9 +52,13 @@ const Header: React.FC = () => {
           <div className="flex items-center">
             <button
               onClick={handleLogoClick}
-              className="text-2xl font-serif font-bold text-white tracking-wide hover:text-blue-500 transition-colors"
+              className="flex items-center hover:opacity-80 transition-opacity"
             >
-              <span className="text-blue-600">DPD</span> Law Offices
+              <img 
+                src="/logo.png" 
+                alt="DPD Law Offices Logo" 
+                className="h-12 w-auto"
+              />
             </button>
           </div>
 
