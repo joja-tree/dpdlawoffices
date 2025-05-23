@@ -57,7 +57,7 @@ const Header: React.FC = () => {
               <img 
                 src="https://i.ibb.co/YTw7cHvd/Chat-GPT-Image-May-21-2025-11-40-27-PM.png" 
                 alt="DPD Law Offices Logo" 
-                className="h-12 w-auto"
+                className="h-[2.25rem] sm:h-[3rem] md:h-[3.75rem] w-auto"
               />
             </button>
           </div>
