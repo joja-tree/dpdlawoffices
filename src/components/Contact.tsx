@@ -31,13 +31,25 @@ const Contact: React.FC = () => {
       if (error) throw error;
 
       // Send to webhook
-      await fetch('https://hook.eu2.make.com/ow4qij76bakh8b44f6j3agj3xep9kk5w', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+await fetch('https://hook.eu2.make.com/ow4qij76bakh8b44f6j3agj3xep9kk5w', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    full_name: formData.name,
+    email: formData.email,
+    phone: formData.phone,
+    service_requested: formData.service,
+    message: formData.message,
+    submitted_at: new Date().toISOString(),
+    metadata: {
+      form_version: '1.0',
+      page: 'contact',
+      user_agent: navigator.userAgent,
+    }
+  }),
+});
 
       toast.success('Thank you for contacting us. We will get back to you shortly.');
       setFormData({
