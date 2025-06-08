@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import PracticeAreas from './components/PracticeAreas';
@@ -7,28 +7,25 @@ import About from './components/About';
 import Attorneys from './components/Attorneys';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import LoadingScreen from './components/LoadingScreen';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import Disclaimer from './components/Disclaimer';
 
 function HomePage() {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Handle navigation state for scrolling to sections
-    if (location.state?.scrollTo) {
-      const timer = setTimeout(() => {
-        const element = document.getElementById(location.state.scrollTo);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-        // Clear the state to prevent repeated scrolling
-        navigate(location.pathname, { replace: true });
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [location.state, navigate, location.pathname]);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <>
